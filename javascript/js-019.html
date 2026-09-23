@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Objects</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Objects</h1>
+
+    <p id="output"></p>
+
+    <script>
+
+        // Creating an object
+
+        let student = {
+
+            name: "Punith",
+
+            age: 20,
+
+            course: "Computer Science",
+
+            marks: 85,
+
+            city: "India"
+
+        };
+
+
+        // Accessing object properties
+
+        let result = "";
+
+        result += "Student Details<br><br>";
+
+        result += "Name: " + student.name + "<br>";
+
+        result += "Age: " + student.age + "<br>";
+
+        result += "Course: " + student.course + "<br>";
+
+        result += "Marks: " + student.marks + "<br>";
+
+        result += "City: " + student.city + "<br><br>";
+
+
+        // Adding a new property
+
+        student.grade = "A";
+
+        result += "Grade: " + student.grade + "<br>";
+
+
+        // Modifying a property
+
+        student.marks = 90;
+
+        result += "Updated Marks: " + student.marks;
+
+
+        document.getElementById("output").innerHTML = result;
+
+    </script>
+
+</body>
+</html>

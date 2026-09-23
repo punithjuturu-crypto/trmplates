@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM and Events</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+
+        #message {
+            margin: 30px;
+            padding: 20px;
+            background: #e0f2fe;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>DOM & Event-Based Experiment</h1>
+
+    <div id="message">
+        Click the button to interact with the webpage.
+    </div>
+
+    <button onclick="changeMessage()">
+        Click Me
+    </button>
+
+    <script>
+
+        function changeMessage() {
+
+            document.getElementById("message").innerHTML =
+                "The DOM has been changed using JavaScript!";
+
+        }
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrays and Array Methods</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Arrays</h1>
+
+    <p id="output"></p>
+
+    <script>
+
+        let numbers = [10, 20, 30, 40];
+
+        let result = "";
+
+        // Original array
+        result += "Original Array: " +
+                  numbers.join(", ") + "<br><br>";
+
+        // Push
+        numbers.push(50);
+
+        result += "After push(50): " +
+                  numbers.join(", ") + "<br>";
+
+        // Pop
+        numbers.pop();
+
+        result += "After pop(): " +
+                  numbers.join(", ") + "<br>";
+
+        // Unshift
+        numbers.unshift(5);
+
+        result += "After unshift(5): " +
+                  numbers.join(", ") + "<br>";
+
+        // Shift
+        numbers.shift();
+
+        result += "After shift(): " +
+                  numbers.join(", ") + "<br>";
+
+        // Map
+        let doubled = numbers.map(number => number * 2);
+
+        result += "Doubled Array: " +
+                  doubled.join(", ") + "<br>";
+
+        // Filter
+        let greaterThan20 =
+            numbers.filter(number => number > 20);
+
+        result += "Numbers greater than 20: " +
+                  greaterThan20.join(", ") + "<br>";
+
+        // Reduce
+        let sum =
+            numbers.reduce((total, number) => total + number, 0);
+
+        result += "Sum: " + sum;
+
+
+        document.getElementById("output").innerHTML = result;
+
+    </script>
+
+</body>
+</html>

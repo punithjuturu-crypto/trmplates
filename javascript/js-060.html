@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Common Elements</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Common Elements</h1>
+
+    <input type="text"
+           id="array1"
+           placeholder="Array 1: 1,2,3,4">
+
+    <input type="text"
+           id="array2"
+           placeholder="Array 2: 3,4,5,6">
+
+    <button onclick="findCommon()">
+        Find Common Elements
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+function findCommon() {
+
+    let input1 =
+        document.getElementById("array1").value;
+
+    let input2 =
+        document.getElementById("array2").value;
+
+    let array1 =
+        input1.split(",").map(item => item.trim());
+
+    let array2 =
+        input2.split(",").map(item => item.trim());
+
+    let commonElements =
+        [...new Set(array1.filter(element =>
+            array2.includes(element)
+        ))];
+
+    if (commonElements.length === 0) {
+
+        document.getElementById("result").innerHTML =
+            "No common elements found.";
+
+    } else {
+
+        document.getElementById("result").innerHTML =
+
+            "<b>Common Elements:</b> " +
+            commonElements.join(", ");
+    }
+}
+
+</script>
+
+</body>
+</html>

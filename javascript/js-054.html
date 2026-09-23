@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Power Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 70px;
+        }
+
+        .container {
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: orange;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Power Calculator</h1>
+
+    <input type="number"
+           id="base"
+           placeholder="Enter base">
+
+    <input type="number"
+           id="exponent"
+           placeholder="Enter exponent">
+
+    <button onclick="calculatePower()">
+        Calculate
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+function calculatePower() {
+
+    let base =
+        Number(document.getElementById("base").value);
+
+    let exponent =
+        Number(document.getElementById("exponent").value);
+
+    if (!Number.isFinite(base) ||
+        !Number.isInteger(exponent)) {
+
+        document.getElementById("result").innerHTML =
+            "Enter a valid base and integer exponent.";
+
+        return;
+    }
+
+    let result = Math.pow(base, exponent);
+
+    document.getElementById("result").innerHTML =
+        base + " raised to the power " +
+        exponent + " = " + result;
+}
+
+</script>
+
+</body>
+</html>

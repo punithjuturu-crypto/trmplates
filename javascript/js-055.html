@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count Digits</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 70px;
+        }
+
+        .container {
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Count Digits</h1>
+
+    <input type="number"
+           id="number"
+           placeholder="Enter a number">
+
+    <button onclick="countDigits()">
+        Count Digits
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+function countDigits() {
+
+    let number =
+        document.getElementById("number").value.trim();
+
+    if (number === "") {
+
+        document.getElementById("result").innerHTML =
+            "Please enter a number.";
+
+        return;
+    }
+
+    // Remove the negative sign
+    number = number.replace("-", "");
+
+    // Count digits
+    let count = number.length;
+
+    document.getElementById("result").innerHTML =
+        "Number of digits = " + count;
+}
+
+</script>
+
+</body>
+</html>

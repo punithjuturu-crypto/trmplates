@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Largest and Smallest Array Element</title>
+</head>
+
+<body>
+
+    <h1>Largest and Smallest Element</h1>
+
+    <p id="output"></p>
+
+    <script>
+
+        let numbers = [25, 10, 45, 5, 80, 30];
+
+        let largest = numbers[0];
+        let smallest = numbers[0];
+
+        for (let i = 1; i < numbers.length; i++) {
+
+            if (numbers[i] > largest) {
+                largest = numbers[i];
+            }
+
+            if (numbers[i] < smallest) {
+                smallest = numbers[i];
+            }
+        }
+
+        document.getElementById("output").innerHTML =
+            "Array = " + numbers.join(", ") + "<br><br>" +
+            "Largest Element = " + largest + "<br>" +
+            "Smallest Element = " + smallest;
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Character Frequency</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: left;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Character Frequency</h1>
+
+    <input type="text"
+           id="text"
+           placeholder="Enter a string">
+
+    <br>
+
+    <button onclick="findFrequency()">
+        Find Frequency
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+function findFrequency() {
+
+    let text =
+        document.getElementById("text").value;
+
+    let frequency = {};
+
+    for (let char of text) {
+
+        // Ignore spaces
+        if (char === " ") {
+            continue;
+        }
+
+        if (frequency[char]) {
+
+            frequency[char]++;
+
+        } else {
+
+            frequency[char] = 1;
+        }
+    }
+
+    let output = "<h3>Character Frequency:</h3>";
+
+    for (let char in frequency) {
+
+        output +=
+            char + " : " +
+            frequency[char] +
+            "<br>";
+    }
+
+    document.getElementById("result").innerHTML =
+        output;
+}
+
+</script>
+
+</body>
+</html>

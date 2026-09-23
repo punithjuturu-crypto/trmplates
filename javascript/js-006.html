@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Factorial of a Number</title>
+</head>
+
+<body>
+
+    <h1>Factorial Program</h1>
+
+    <p id="output"></p>
+
+    <script>
+
+        let number = 5;
+        let factorial = 1;
+
+        for (let i = 1; i <= number; i++) {
+            factorial = factorial * i;
+        }
+
+        document.getElementById("output").innerHTML =
+            "Number = " + number + "<br>" +
+            "Factorial = " + factorial;
+
+    </script>
+
+</body>
+</html>

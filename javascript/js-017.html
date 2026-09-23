@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Strings and String Methods</title>
+</head>
+
+<body>
+
+    <h1>JavaScript String Methods</h1>
+
+    <p id="output"></p>
+
+    <script>
+
+        let text = "Hello JavaScript";
+
+        let result = "";
+
+        // Original string
+        result += "Original String: " + text + "<br><br>";
+
+        // Length
+        result += "Length: " + text.length + "<br>";
+
+        // Uppercase
+        result += "Uppercase: " + text.toUpperCase() + "<br>";
+
+        // Lowercase
+        result += "Lowercase: " + text.toLowerCase() + "<br>";
+
+        // Character at index
+        result += "Character at index 1: " + text.charAt(1) + "<br>";
+
+        // Includes
+        result += "Contains 'JavaScript': " +
+                  text.includes("JavaScript") + "<br>";
+
+        // Replace
+        result += "Replace: " +
+                  text.replace("JavaScript", "World") + "<br>";
+
+        // Slice
+        result += "Slice: " + text.slice(0, 5) + "<br>";
+
+        // Split
+        result += "Split: " + text.split(" ").join(" | ");
+
+
+        document.getElementById("output").innerHTML = result;
+
+    </script>
+
+</body>
+</html>

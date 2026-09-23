@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classes and Objects</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 50px;
+        }
+
+        .container {
+            width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eee;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>JavaScript Classes and Objects</h1>
+
+    <button onclick="createStudents()">
+        Create Objects
+    </button>
+
+    <div id="output"></div>
+
+</div>
+
+<script>
+
+// Creating a class
+
+class Student {
+
+    constructor(name, age, course) {
+
+        this.name = name;
+        this.age = age;
+        this.course = course;
+    }
+
+    displayDetails() {
+
+        return `
+            Name: ${this.name}<br>
+            Age: ${this.age}<br>
+            Course: ${this.course}
+        `;
+    }
+}
+
+
+// Creating objects from the class
+
+function createStudents() {
+
+    let student1 =
+        new Student("punith", 20, "B.Tech");
+
+    let student2 =
+        new Student("suresh", 25, "job");
+
+    document.getElementById("output").innerHTML =
+
+        "<h3>Student 1</h3>" +
+        student1.displayDetails() +
+
+        "<h3>Student 2</h3>" +
+        student2.displayDetails();
+}
+
+</script>
+
+</body>
+</html>

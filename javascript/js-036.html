@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Countdown Timer</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f2f2f2;
+            padding-top: 80px;
+        }
+
+        .timer {
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        #display {
+            font-size: 50px;
+            font-weight: bold;
+            margin: 25px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 18px;
+            width: 100px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .start {
+            background: green;
+            color: white;
+        }
+
+        .stop {
+            background: red;
+            color: white;
+        }
+
+        .reset {
+            background: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="timer">
+
+    <h1>Countdown Timer</h1>
+
+    <input type="number" id="minutes"
+           placeholder="Minutes" min="0">
+
+    <input type="number" id="seconds"
+           placeholder="Seconds" min="0" max="59">
+
+    <div id="display">00:00</div>
+
+    <button class="start" onclick="startTimer()">
+        Start
+    </button>
+
+    <button class="stop" onclick="stopTimer()">
+        Stop
+    </button>
+
+    <button class="reset" onclick="resetTimer()">
+        Reset
+    </button>
+
+    <p id="message"></p>
+
+</div>
+
+<script>
+
+let totalSeconds = 0;
+let timer = null;
+
+function updateDisplay() {
+
+    let minutes = Math.floor(totalSeconds / 60);
+    let seconds = totalSeconds % 60;
+
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
+    document.getElementById("display").innerHTML =
+        minutes + ":" + seconds;
+}
+
+function startTimer() {
+
+    if (timer !== null) {
+        return;
+    }
+
+    if (totalSeconds === 0) {
+
+        let minutes =
+            Number(document.getElementById("minutes").value) || 0;
+
+        let seconds =
+            Number(document.getElementById("seconds").value) || 0;
+
+        totalSeconds = minutes * 60 + seconds;
+    }
+
+    if (totalSeconds <= 0) {
+        alert("Please enter a valid time.");
+        return;
+    }
+
+    document.getElementById("message").innerHTML = "";
+
+    timer = setInterval(function() {
+
+        totalSeconds--;
+
+        updateDisplay();
+
+        if (totalSeconds <= 0) {
+
+            clearInterval(timer);
+            timer = null;
+
+            document.getElementById("message").innerHTML =
+                "Time's Up!";
+
+            alert("Time's Up!");
+        }
+
+    }, 1000);
+}
+
+function stopTimer() {
+
+    clearInterval(timer);
+    timer = null;
+}
+
+function resetTimer() {
+
+    clearInterval(timer);
+    timer = null;
+
+    totalSeconds = 0;
+
+    document.getElementById("minutes").value = "";
+    document.getElementById("seconds").value = "";
+
+    document.getElementById("message").innerHTML = "";
+
+    updateDisplay();
+}
+
+updateDisplay();
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Largest of Three Numbers</title>
+</head>
+
+<body>
+
+    <h1>Find Largest Number</h1>
+
+    <p id="output"></p>
+
+    <script>
+
+        let a = 25;
+        let b = 50;
+        let c = 35;
+
+        let largest;
+
+        if (a >= b && a >= c) {
+            largest = a;
+        }
+        else if (b >= a && b >= c) {
+            largest = b;
+        }
+        else {
+            largest = c;
+        }
+
+        document.getElementById("output").innerHTML =
+            "Numbers: " + a + ", " + b + ", " + c + "<br><br>" +
+            "Largest Number = " + largest;
+
+    </script>
+
+</body>
+</html>

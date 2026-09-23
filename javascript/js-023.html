@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Background Color</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 80px;
+
+            background-color: white;
+
+            transition: 0.5s;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 15px 25px;
+            margin: 10px;
+
+            border: none;
+            border-radius: 7px;
+
+            color: white;
+            cursor: pointer;
+
+            font-size: 16px;
+        }
+
+        .blue {
+            background: #2563eb;
+        }
+
+        .green {
+            background: #16a34a;
+        }
+
+        .red {
+            background: #dc2626;
+        }
+
+        .purple {
+            background: #9333ea;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Change Background Color</h1>
+
+    <p>Select a color:</p>
+
+    <br>
+
+    <button class="blue" onclick="changeColor('lightblue')">
+        Blue
+    </button>
+
+    <button class="green" onclick="changeColor('lightgreen')">
+        Green
+    </button>
+
+    <button class="red" onclick="changeColor('lightcoral')">
+        Red
+    </button>
+
+    <button class="purple" onclick="changeColor('lavender')">
+        Purple
+    </button>
+
+    <script>
+
+        function changeColor(color) {
+
+            document.body.style.backgroundColor = color;
+
+        }
+
+    </script>
+
+</body>
+</html>

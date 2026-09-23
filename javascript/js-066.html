@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Regular Expression Demo</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f2f2f2;
+            text-align:center;
+            padding-top:50px;
+        }
+
+        .container{
+            width:500px;
+            margin:auto;
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        input{
+            width:90%;
+            padding:12px;
+            margin:10px;
+            font-size:16px;
+        }
+
+        button{
+            padding:12px 25px;
+            background:blue;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        #result{
+            margin-top:20px;
+            text-align:left;
+            line-height:2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Regular Expression Demo</h1>
+
+    <input type="text"
+           id="text"
+           placeholder="Enter any text">
+
+    <br>
+
+    <button onclick="checkRegex()">
+        Check
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+function checkRegex(){
+
+    let text =
+        document.getElementById("text").value;
+
+    let digitPattern = /\d/g;
+    let wordPattern = /\w/g;
+    let vowelPattern = /[aeiou]/gi;
+
+    let digits =
+        text.match(digitPattern);
+
+    let words =
+        text.match(wordPattern);
+
+    let vowels =
+        text.match(vowelPattern);
+
+    document.getElementById("result").innerHTML =
+
+        "<b>Input:</b> " + text +
+
+        "<br><b>Digits Found:</b> " +
+        (digits ? digits.join(", ") : "None") +
+
+        "<br><b>Total Digits:</b> " +
+        (digits ? digits.length : 0) +
+
+        "<br><b>Total Characters:</b> " +
+        (words ? words.length : 0) +
+
+        "<br><b>Vowels Found:</b> " +
+        (vowels ? vowels.join(", ") : "None") +
+
+        "<br><b>Total Vowels:</b> " +
+        (vowels ? vowels.length : 0);
+}
+
+</script>
+
+</body>
+</html>

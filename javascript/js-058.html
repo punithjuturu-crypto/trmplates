@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Merge Two Arrays</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: purple;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Merge Two Arrays</h1>
+
+    <input type="text"
+           id="array1"
+           placeholder="Array 1: 1,2,3">
+
+    <input type="text"
+           id="array2"
+           placeholder="Array 2: 4,5,6">
+
+    <button onclick="mergeArrays()">
+        Merge
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+function mergeArrays() {
+
+    let input1 =
+        document.getElementById("array1").value;
+
+    let input2 =
+        document.getElementById("array2").value;
+
+    let array1 =
+        input1.split(",").map(item => item.trim());
+
+    let array2 =
+        input2.split(",").map(item => item.trim());
+
+    // Spread operator
+    let mergedArray = [...array1, ...array2];
+
+    document.getElementById("result").innerHTML =
+
+        "<b>Array 1:</b> " +
+        array1.join(", ") +
+
+        "<br><b>Array 2:</b> " +
+        array2.join(", ") +
+
+        "<br><b>Merged Array:</b> " +
+        mergedArray.join(", ");
+}
+
+</script>
+
+</body>
+</html>

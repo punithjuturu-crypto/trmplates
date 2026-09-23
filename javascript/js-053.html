@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .container {
+            width: 450px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            width: 80%;
+            padding: 12px;
+            margin: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: purple;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #aaa;
+            padding: 10px;
+        }
+
+        th {
+            background: purple;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Multiplication Table</h1>
+
+    <input type="number"
+           id="number"
+           placeholder="Enter a number">
+
+    <button onclick="generateTable()">
+        Generate
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+function generateTable() {
+
+    let number =
+        Number(document.getElementById("number").value);
+
+    if (!Number.isInteger(number)) {
+
+        document.getElementById("result").innerHTML =
+            "Please enter a valid integer.";
+
+        return;
+    }
+
+    let output = `
+        <table>
+            <tr>
+                <th>Multiplication</th>
+                <th>Result</th>
+            </tr>
+    `;
+
+    for (let i = 1; i <= 10; i++) {
+
+        output += `
+            <tr>
+                <td>${number} × ${i}</td>
+                <td>${number * i}</td>
+            </tr>
+        `;
+    }
+
+    output += "</table>";
+
+    document.getElementById("result").innerHTML =
+        output;
+}
+
+</script>
+
+</body>
+</html>

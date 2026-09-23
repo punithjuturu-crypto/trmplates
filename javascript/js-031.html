@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 40px;
+        }
+
+        .container {
+            width: 350px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input {
+            width: 94%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Registration Form</h2>
+
+    <form onsubmit="return validateForm()">
+
+        <input type="text" id="name" placeholder="Enter Name">
+
+        <input type="text" id="email" placeholder="Enter Email">
+
+        <input type="text" id="phone" placeholder="Enter Phone Number">
+
+        <input type="password" id="password"
+               placeholder="Enter Password">
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+    <p id="message"></p>
+
+</div>
+
+<script>
+
+function validateForm() {
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let password = document.getElementById("password").value;
+
+    let message = document.getElementById("message");
+
+    // Name validation
+    let namePattern = /^[A-Za-z ]+$/;
+
+    if (name === "" || !namePattern.test(name)) {
+        message.style.color = "red";
+        message.innerHTML = "Enter a valid name.";
+        return false;
+    }
+
+    // Email validation
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!emailPattern.test(email)) {
+        message.style.color = "red";
+        message.innerHTML = "Enter a valid email address.";
+        return false;
+    }
+
+    // Phone validation
+    let phonePattern = /^[0-9]{10}$/;
+
+    if (!phonePattern.test(phone)) {
+        message.style.color = "red";
+        message.innerHTML =
+            "Phone number must contain exactly 10 digits.";
+        return false;
+    }
+
+    // Password validation
+    if (password.length < 6) {
+        message.style.color = "red";
+        message.innerHTML =
+            "Password must contain at least 6 characters.";
+        return false;
+    }
+
+    message.style.color = "green";
+    message.innerHTML = "Form submitted successfully!";
+
+    return false;
+}
+
+</script>
+
+</body>
+</html>

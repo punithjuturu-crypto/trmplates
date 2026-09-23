@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date and Math Objects</title>
+</head>
+
+<body>
+
+    <h1>Date and Math Objects</h1>
+
+    <p id="output"></p>
+
+    <script>
+
+        // =========================
+        // DATE OBJECT
+        // =========================
+
+        let today = new Date();
+
+        let result = "";
+
+        result += "<h2>Date Object</h2>";
+
+        result += "Current Date and Time: " +
+                  today + "<br><br>";
+
+        result += "Year: " +
+                  today.getFullYear() + "<br>";
+
+        result += "Month: " +
+                  (today.getMonth() + 1) + "<br>";
+
+        result += "Date: " +
+                  today.getDate() + "<br>";
+
+        result += "Day: " +
+                  today.getDay() + "<br>";
+
+        result += "Hours: " +
+                  today.getHours() + "<br>";
+
+        result += "Minutes: " +
+                  today.getMinutes() + "<br>";
+
+
+        // =========================
+        // MATH OBJECT
+        // =========================
+
+        result += "<br><h2>Math Object</h2>";
+
+        result += "PI: " + Math.PI + "<br>";
+
+        result += "Square Root of 64: " +
+                  Math.sqrt(64) + "<br>";
+
+        result += "Power 2^3: " +
+                  Math.pow(2, 3) + "<br>";
+
+        result += "Round 5.7: " +
+                  Math.round(5.7) + "<br>";
+
+        result += "Floor 5.7: " +
+                  Math.floor(5.7) + "<br>";
+
+        result += "Ceil 5.2: " +
+                  Math.ceil(5.2) + "<br>";
+
+        result += "Absolute value of -10: " +
+                  Math.abs(-10) + "<br>";
+
+        result += "Maximum: " +
+                  Math.max(10, 50, 30) + "<br>";
+
+        result += "Minimum: " +
+                  Math.min(10, 50, 30);
+
+
+        document.getElementById("output").innerHTML = result;
+
+    </script>
+
+</body>
+</html>

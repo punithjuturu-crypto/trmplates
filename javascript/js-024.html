@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Click Event</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 60px;
+            background: #f1f5f9;
+        }
+
+        button {
+            padding: 15px 30px;
+
+            background: #2563eb;
+            color: white;
+
+            border: none;
+            border-radius: 8px;
+
+            font-size: 18px;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        #count {
+            font-size: 30px;
+            margin: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Button Click Event</h1>
+
+    <p id="count">
+        Button clicked: 0 times
+    </p>
+
+    <button id="clickButton">
+        Click Me
+    </button>
+
+    <script>
+
+        let count = 0;
+
+        document.getElementById("clickButton")
+            .addEventListener("click", function() {
+
+                count++;
+
+                document.getElementById("count").textContent =
+                    "Button clicked: " + count + " times";
+
+            });
+
+    </script>
+
+</body>
+</html>

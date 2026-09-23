@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Second Largest Element</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Second Largest Element</h1>
+
+    <input type="text"
+           id="array"
+           placeholder="Example: 10, 20, 5, 40, 30">
+
+    <button onclick="findSecondLargest()">
+        Find
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+function findSecondLargest() {
+
+    let input =
+        document.getElementById("array").value;
+
+    let arr = input.split(",")
+                   .map(Number)
+                   .filter(Number.isFinite);
+
+    let unique = [...new Set(arr)];
+
+    if (unique.length < 2) {
+
+        document.getElementById("result").innerHTML =
+            "Enter at least two different numbers.";
+
+        return;
+    }
+
+    unique.sort(function(a, b) {
+        return b - a;
+    });
+
+    let secondLargest = unique[1];
+
+    document.getElementById("result").innerHTML =
+        "Array: " + arr.join(", ") +
+        "<br>Second Largest = " + secondLargest;
+}
+
+</script>
+
+</body>
+</html>

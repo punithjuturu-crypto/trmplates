@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arrow Functions</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Arrow Functions</h1>
+
+    <p id="output"></p>
+
+    <script>
+
+        // Arrow function without parameters
+        const greet = () => {
+            return "Hello! Welcome to JavaScript";
+        };
+
+        // Arrow function with parameters
+        const add = (a, b) => {
+            return a + b;
+        };
+
+        // Short arrow function
+        const square = number => number * number;
+
+        // Arrow function to check even or odd
+        const checkEven = number =>
+            number % 2 === 0 ? "Even" : "Odd";
+
+
+        let result = "";
+
+        result += greet() + "<br><br>";
+
+        result += "10 + 20 = " + add(10, 20) + "<br>";
+
+        result += "Square of 6 = " + square(6) + "<br>";
+
+        result += "15 is " + checkEven(15);
+
+
+        document.getElementById("output").innerHTML = result;
+
+    </script>
+
+</body>
+</html>

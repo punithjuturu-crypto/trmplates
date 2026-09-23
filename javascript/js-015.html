@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Functions</title>
+</head>
+
+<body>
+
+    <h1>JavaScript Functions</h1>
+
+    <p id="output"></p>
+
+    <script>
+
+        // Function without parameters
+        function greet() {
+            return "Hello, Welcome to JavaScript";
+        }
+
+
+        // Function with parameters
+        function add(a, b) {
+            return a + b;
+        }
+
+
+        // Function to calculate square
+        function square(number) {
+            return number * number;
+        }
+
+
+        // Function to check even or odd
+        function checkEvenOdd(number) {
+
+            if (number % 2 === 0) {
+                return "Even";
+            }
+            else {
+                return "Odd";
+            }
+        }
+
+
+        // Calling functions
+
+        let message = greet();
+
+        let sum = add(80, 50);
+
+        let result = square(5);
+
+        let type = checkEvenOdd(10);
+
+
+        document.getElementById("output").innerHTML =
+
+            message + "<br><br>" +
+
+            "80 + 50= " + sum + "<br>" +
+
+            "Square of 5 = " + result + "<br>" +
+
+            "10 is " + type;
+
+    </script>
+
+</body>
+</html>

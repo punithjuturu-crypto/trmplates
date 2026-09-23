@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Frequency</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        .container {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: orange;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: left;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Element Frequency</h1>
+
+    <input type="text"
+           id="array"
+           placeholder="Example: 1,2,2,3,1,2">
+
+    <button onclick="findFrequency()">
+        Find Frequency
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+function findFrequency() {
+
+    let input =
+        document.getElementById("array").value;
+
+    let arr =
+        input.split(",").map(item => item.trim());
+
+    let frequency = {};
+
+    arr.forEach(function(element) {
+
+        if (frequency[element]) {
+
+            frequency[element]++;
+
+        } else {
+
+            frequency[element] = 1;
+        }
+    });
+
+    let output = "<h3>Frequency:</h3>";
+
+    for (let element in frequency) {
+
+        output +=
+            element + " : " +
+            frequency[element] +
+            "<br>";
+    }
+
+    document.getElementById("result").innerHTML =
+        output;
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Webpage</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #f5f5f5;
+            color: #222;
+            transition: 0.3s;
+        }
+
+        nav {
+            background: #333;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav h2 {
+            color: white;
+            margin: 0;
+        }
+
+        nav button {
+            padding: 8px 15px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+            background: #667eea;
+            color: white;
+        }
+
+        .hero button {
+            padding: 12px 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .section {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px 20px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px #bbb;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+        }
+
+        form button {
+            padding: 12px 25px;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .dark {
+            background: #181818;
+            color: white;
+        }
+
+        .dark .card {
+            background: #292929;
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+
+    <h2>My Website</h2>
+
+    <button onclick="toggleDarkMode()">
+        Dark Mode
+    </button>
+
+</nav>
+
+<section class="hero">
+
+    <h1 id="welcome">
+        Welcome to My Website
+    </h1>
+
+    <p>Interactive HTML, CSS and JavaScript webpage</p>
+
+    <button onclick="changeWelcome()">
+        Click Me
+    </button>
+
+</section>
+
+<section class="section">
+
+    <h2>Features</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>HTML</h3>
+            <p>Creates the structure of the webpage.</p>
+        </div>
+
+        <div class="card">
+            <h3>CSS</h3>
+            <p>Styles the webpage.</p>
+        </div>
+
+        <div class="card">
+            <h3>JavaScript</h3>
+            <p>Adds interaction and functionality.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <h2>Counter</h2>
+
+    <h1 id="count">0</h1>
+
+    <button onclick="increase()">+</button>
+
+    <button onclick="decrease()">-</button>
+
+</section>
+
+<section class="section">
+
+    <h2>Contact Us</h2>
+
+    <form onsubmit="submitForm(event)">
+
+        <input type="text"
+               id="name"
+               placeholder="Your Name"
+               required>
+
+        <input type="email"
+               id="email"
+               placeholder="Your Email"
+               required>
+
+        <textarea id="message"
+                  placeholder="Your Message"
+                  required></textarea>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+    </form>
+
+    <p id="formMessage"></p>
+
+</section>
+
+<script>
+
+let count = 0;
+
+function toggleDarkMode() {
+
+    document.body.classList.toggle("dark");
+}
+
+function changeWelcome() {
+
+    document.getElementById("welcome").innerHTML =
+        "Thanks for Visiting My Website!";
+}
+
+function increase() {
+
+    count++;
+
+    document.getElementById("count").innerHTML =
+        count;
+}
+
+function decrease() {
+
+    count--;
+
+    document.getElementById("count").innerHTML =
+        count;
+}
+
+function submitForm(event) {
+
+    event.preventDefault();
+
+    document.getElementById("formMessage").innerHTML =
+        "Your message has been submitted successfully!";
+
+    document.getElementById("formMessage").style.color =
+        "green";
+}
+
+</script>
+
+</body>
+</html>

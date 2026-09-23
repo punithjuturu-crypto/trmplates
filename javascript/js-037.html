@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced JavaScript</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 30px;
+        }
+
+        .container {
+            width: 700px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eee;
+            line-height: 1.8;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Advanced JavaScript Demonstration</h1>
+
+    <button onclick="runProgram()">
+        Run JavaScript
+    </button>
+
+    <div id="output"></div>
+
+</div>
+
+<script>
+
+function runProgram() {
+
+    // let and const
+    let name = "Punith";
+    const age = 20;
+
+    // Template literal
+    let greeting = `Hello ${name}, you are ${age} years old.`;
+
+    // Destructuring
+    let student = {
+        name: "Rahul",
+        age: 21,
+        course: "Computer Science"
+    };
+
+    let { name: studentName, age: studentAge, course } = student;
+
+    // Spread operator
+    let numbers1 = [10, 20, 30];
+    let numbers2 = [40, 50, 60];
+
+    let allNumbers = [...numbers1, ...numbers2];
+
+    // Rest operator
+    function addNumbers(...numbers) {
+
+        let sum = 0;
+
+        for (let number of numbers) {
+            sum += number;
+        }
+
+        return sum;
+    }
+
+    let sum = addNumbers(10, 20, 30, 40);
+
+    // Class and object
+    class Student {
+
+        constructor(name, course) {
+            this.name = name;
+            this.course = course;
+        }
+
+        display() {
+            return `${this.name} is studying ${this.course}.`;
+        }
+    }
+
+    let studentObject =
+        new Student("Anil", "JavaScript");
+
+    document.getElementById("output").innerHTML =
+
+        "<b>let:</b> " + name +
+
+        "<br><b>const:</b> " + age +
+
+        "<br><b>Template Literal:</b> " + greeting +
+
+        "<br><b>Destructuring:</b> " +
+        studentName + ", " + studentAge + ", " + course +
+
+        "<br><b>Spread Operator:</b> " +
+        allNumbers.join(", ") +
+
+        "<br><b>Rest Operator:</b> Sum = " + sum +
+
+        "<br><b>Class and Object:</b> " +
+        studentObject.display();
+}
+
+</script>
+
+</body>
+</html>

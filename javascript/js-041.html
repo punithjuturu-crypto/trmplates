@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Inheritance</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .container {
+            width: 600px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eee;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>JavaScript Inheritance</h1>
+
+    <button onclick="showInheritance()">
+        Demonstrate Inheritance
+    </button>
+
+    <div id="output"></div>
+
+</div>
+
+<script>
+
+// Parent class
+class Person {
+
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    displayPerson() {
+        return `Name: ${this.name}<br>Age: ${this.age}`;
+    }
+}
+
+// Child class
+class Student extends Person {
+
+    constructor(name, age, course) {
+        super(name, age);
+        this.course = course;
+    }
+
+    displayStudent() {
+        return `
+            ${this.displayPerson()}<br>
+            Course: ${this.course}
+        `;
+    }
+}
+
+// Creating child object
+function showInheritance() {
+
+    let student =
+        new Student("arjun", 20, "B.Tech");
+
+    document.getElementById("output").innerHTML =
+        "<h3>Student Details</h3>" +
+        student.displayStudent();
+}
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ES6 Features</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f4f4;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .box {
+            width: 600px;
+            margin: auto;
+            padding: 25px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        button {
+            padding: 12px 20px;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            text-align: left;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>ES6 Features</h1>
+
+    <button onclick="showES6()">
+        Demonstrate ES6
+    </button>
+
+    <div id="output"></div>
+
+</div>
+
+<script>
+
+function showES6() {
+
+    // let
+    let city = "Hyderabad";
+
+    // const
+    const country = "India";
+
+    // Template literal
+    let message =
+        `I live in ${city}, ${country}.`;
+
+    // Object destructuring
+    const student = {
+        name: "Ravi",
+        age: 20,
+        course: "B.Tech"
+    };
+
+    const { name, age, course } = student;
+
+    // Array destructuring
+    const marks = [85, 90, 95];
+
+    const [mark1, mark2, mark3] = marks;
+
+    document.getElementById("output").innerHTML =
+
+        "<b>let:</b> " + city +
+
+        "<br><b>const:</b> " + country +
+
+        "<br><b>Template Literal:</b> " +
+        message +
+
+        "<br><b>Object Destructuring:</b> " +
+        name + ", " + age + ", " + course +
+
+        "<br><b>Array Destructuring:</b> " +
+        mark1 + ", " + mark2 + ", " + mark3;
+}
+
+</script>
+
+</body>
+</html>

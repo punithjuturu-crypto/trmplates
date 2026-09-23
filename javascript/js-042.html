@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Callbacks Promises Async Await</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .container {
+            width: 650px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        button {
+            padding: 12px 18px;
+            margin: 5px;
+            border: none;
+            color: white;
+            background: blue;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            padding: 15px;
+            background: #eee;
+            text-align: left;
+            line-height: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Callbacks, Promises and Async/Await</h1>
+
+    <button onclick="runCallback()">
+        Callback
+    </button>
+
+    <button onclick="runPromise()">
+        Promise
+    </button>
+
+    <button onclick="runAsync()">
+        Async/Await
+    </button>
+
+    <div id="output"></div>
+
+</div>
+
+<script>
+
+// Callback function
+function getMessage(callback) {
+
+    setTimeout(function() {
+        callback("Data received using Callback");
+    }, 1000);
+}
+
+function runCallback() {
+
+    document.getElementById("output").innerHTML =
+        "Loading...";
+
+    getMessage(function(message) {
+
+        document.getElementById("output").innerHTML =
+            message;
+
+    });
+}
+
+
+// Promise
+function getPromise() {
+
+    return new Promise(function(resolve) {
+
+        setTimeout(function() {
+
+            resolve("Data received using Promise");
+
+        }, 1000);
+
+    });
+}
+
+function runPromise() {
+
+    document.getElementById("output").innerHTML =
+        "Loading...";
+
+    getPromise().then(function(message) {
+
+        document.getElementById("output").innerHTML =
+            message;
+
+    });
+}
+
+
+// Async/Await
+async function runAsync() {
+
+    document.getElementById("output").innerHTML =
+        "Loading...";
+
+    let message = await getPromise();
+
+    document.getElementById("output").innerHTML =
+        "Data received using Async/Await";
+}
+
+</script>
+
+</body>
+</html>

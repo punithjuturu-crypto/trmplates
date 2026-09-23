@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GCD of Two Numbers</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding-top: 70px;
+        }
+
+        .container {
+            width: 400px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input {
+            width: 90%;
+            padding: 12px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: green;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>GCD Calculator</h1>
+
+    <input type="number"
+           id="num1"
+           placeholder="Enter first number">
+
+    <input type="number"
+           id="num2"
+           placeholder="Enter second number">
+
+    <button onclick="findGCD()">
+        Find GCD
+    </button>
+
+    <div id="result"></div>
+
+</div>
+
+<script>
+
+function findGCD() {
+
+    let a =
+        Math.abs(Number(document.getElementById("num1").value));
+
+    let b =
+        Math.abs(Number(document.getElementById("num2").value));
+
+    if (a === 0 && b === 0) {
+
+        document.getElementById("result").innerHTML =
+            "GCD is undefined for 0 and 0.";
+
+        return;
+    }
+
+    while (b !== 0) {
+
+        let remainder = a % b;
+
+        a = b;
+
+        b = remainder;
+    }
+
+    document.getElementById("result").innerHTML =
+        "GCD = " + a;
+}
+
+</script>
+
+</body>
+</html>
