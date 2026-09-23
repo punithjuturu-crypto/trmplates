@@ -1,0 +1,167 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Webpage</title>
+
+    <style>
+        /* Basic styling */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        /* Header */
+        header {
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #333;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Main content */
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .box {
+            background-color: white;
+            padding: 25px;
+            flex: 1;
+            border: 2px solid darkblue;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .box h2 {
+            color: darkblue;
+        }
+
+        /* Tablet screen */
+        @media screen and (max-width: 768px) {
+
+            .container {
+                flex-direction: column;
+            }
+
+            nav a {
+                padding: 12px;
+            }
+
+            header h1 {
+                font-size: 28px;
+            }
+        }
+
+        /* Mobile screen */
+        @media screen and (max-width: 480px) {
+
+            header {
+                padding: 15px;
+            }
+
+            header h1 {
+                font-size: 22px;
+            }
+
+            nav {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav a {
+                border-bottom: 1px solid gray;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .box {
+                padding: 15px;
+            }
+
+            .box h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Responsive Webpage</h1>
+        <p>Resize the browser window to see the changes</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Courses</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <!-- Content -->
+    <div class="container">
+
+        <div class="box">
+            <h2>HTML</h2>
+            <p>
+                HTML is used to create the structure
+                of a webpage.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>CSS</h2>
+            <p>
+                CSS is used to style and design
+                webpages.
+            </p>
+        </div>
+
+        <div class="box">
+            <h2>JavaScript</h2>
+            <p>
+                JavaScript is used to add
+                interactivity to webpages.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

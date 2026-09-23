@@ -1,0 +1,71 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio and Video</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: lightgray;
+            padding: 30px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        .box {
+            background-color: white;
+            padding: 25px;
+            margin: 20px auto;
+            width: 70%;
+            border-radius: 10px;
+        }
+
+        audio, video {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Audio and Video Webpage</h1>
+
+    <!-- Audio -->
+    <div class="box">
+        <h2>Sample Audio</h2>
+
+        <audio controls>
+            <source
+                src="https://www.w3schools.com/html/horse.ogg"
+                type="audio/ogg">
+
+            Your browser does not support the audio element.
+        </audio>
+
+        <p>Click the play button to listen to the audio.</p>
+    </div>
+
+
+    <!-- Video -->
+    <div class="box">
+        <h2>Sample Video</h2>
+
+        <video width="600" controls>
+            <source
+                src="https://www.w3schools.com/html/mov_bbb.mp4"
+                type="video/mp4">
+
+            Your browser does not support the video element.
+        </video>
+
+        <p>Click the play button to watch the video.</p>
+    </div>
+
+</body>
+</html>
+```
+

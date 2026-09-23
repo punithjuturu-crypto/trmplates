@@ -1,0 +1,93 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML Table</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            margin: 30px auto;
+        }
+
+        th, td {
+            border: 2px solid black;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightblue;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>College Timetable</h1>
+
+    <table>
+
+        <!-- Merged cell using colspan -->
+        <tr>
+            <th colspan="4">Computer Science Department</th>
+        </tr>
+
+        <!-- Column headings -->
+        <tr>
+            <th>Day</th>
+            <th>Subject 1</th>
+            <th>Subject 2</th>
+            <th>Subject 3</th>
+        </tr>
+
+        <!-- Rows and columns -->
+        <tr>
+            <td>Monday</td>
+            <td>web tech</td>
+            <td>daa</td>
+            <td>liner algebra</td>
+        </tr>
+
+        <tr>
+            <td>Tuesday</td>
+            <td>Python</td>
+            <td>data science</td>
+            <td>daa</td>
+        </tr>
+
+        <tr>
+            <td>Wednesday</td>
+            <td> data science</td>
+            <td colspan="2">Data Structures</td>
+        </tr>
+
+        <tr>
+            <td>Thursday</td>
+            <td>web tech</td>
+            <td>lab</td>
+            <td>Python</td>
+        </tr>
+
+        <!-- Merged row using rowspan -->
+        <tr>
+            <td rowspan="2">Friday</td>
+            <td>linear algebra</td>
+            <td>Lab</td>
+            <td>daa</td>
+        </tr>
+
+        <tr>
+            
+        </tr>
+
+    </table>
+
+</body>
+</html>
+```

@@ -1,0 +1,94 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Input Types</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        .container {
+            width: 400px;
+            margin: auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            background-color: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>HTML5 Input Types</h2>
+
+        <form>
+
+            <!-- Email Input -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"
+                   placeholder="Enter your email" required>
+
+            <!-- Date Input -->
+            <label for="date">Date of Birth:</label>
+            <input type="date" id="date" name="date" required>
+
+            <!-- Number Input -->
+            <label for="number">Age:</label>
+            <input type="number" id="number" name="age"
+                   min="1" max="100"
+                   placeholder="Enter your age" required>
+
+            <!-- Password Input -->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"
+                   placeholder="Enter your password" required>
+
+            <!-- Submit Button -->
+            <input type="submit" value="Submit">
+
+        </form>
+
+    </div>
+
+</body>
+</html>
+```

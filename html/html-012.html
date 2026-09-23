@@ -1,0 +1,120 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Properties Demonstration</title>
+
+    <style>
+        /* Element Selector */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+        }
+
+        /* ID Selector */
+        #heading {
+            color: darkblue;
+            text-align: center;
+            font-family: Georgia, serif;
+        }
+
+        /* Class Selector */
+        .intro {
+            color: green;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        /* Box demonstrating margin, padding and border */
+        .box {
+            width: 500px;
+
+            /* Margin */
+            margin: 30px auto;
+
+            /* Padding */
+            padding: 25px;
+
+            /* Border */
+            border: 3px solid darkblue;
+
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        /* Descendant Selector */
+        .box p {
+            color: #444;
+            font-family: Verdana, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Group Selector */
+        h2, h3 {
+            color: darkred;
+        }
+
+        /* Attribute Selector */
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid gray;
+        }
+
+        /* Button styling */
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: darkblue;
+            color: white;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="heading">CSS Selectors and Properties</h1>
+
+    <p class="intro">
+        This webpage demonstrates CSS selectors, colors, fonts,
+        margins, padding, and borders.
+    </p>
+
+    <div class="box">
+
+        <h2>CSS Demonstration</h2>
+
+        <h3>Selectors</h3>
+
+        <p>
+            CSS selectors are used to select HTML elements and
+            apply styles to them.
+        </p>
+
+        <p>
+            This box demonstrates background colors, font styles,
+            margins, padding, and borders.
+        </p>
+
+        <label>Enter your name:</label>
+        <br><br>
+
+        <input type="text" placeholder="Your Name">
+
+        <br>
+
+        <button>Submit</button>
+
+    </div>
+
+</body>
+</html>
+```
