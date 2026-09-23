@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Only Modal</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        /* Hide checkbox */
+
+        #modal-toggle {
+            display: none;
+        }
+
+        /* Open button */
+
+        .open-button {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .open-button:hover {
+            background: #1d4ed8;
+        }
+
+        /* Modal background */
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+
+            background: rgba(0, 0, 0, 0.7);
+
+            display: none;
+
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Show modal when checkbox is checked */
+
+        #modal-toggle:checked ~ .modal {
+            display: flex;
+        }
+
+        /* Modal box */
+
+        .modal-content {
+            width: 90%;
+            max-width: 500px;
+
+            background: white;
+            padding: 35px;
+
+            border-radius: 15px;
+
+            position: relative;
+
+            animation: popup 0.4s ease;
+        }
+
+        .modal-content h2 {
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+
+        .modal-content p {
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        /* Close button */
+
+        .close-button {
+            display: inline-block;
+
+            background: #dc2626;
+            color: white;
+
+            padding: 12px 25px;
+
+            border-radius: 6px;
+
+            cursor: pointer;
+        }
+
+        .close-button:hover {
+            background: #b91c1c;
+        }
+
+        /* Popup animation */
+
+        @keyframes popup {
+
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>CSS-Only Modal / Popup</h1>
+
+<p>Click the button below to open the popup.</p>
+
+<br><br>
+
+<!-- Hidden checkbox -->
+
+<input type="checkbox" id="modal-toggle">
+
+<!-- Open button -->
+
+<label for="modal-toggle" class="open-button">
+    Open Modal
+</label>
+
+<!-- Modal -->
+
+<div class="modal">
+
+    <div class="modal-content">
+
+        <h2>Welcome!</h2>
+
+        <p>
+            This is a CSS-only model.
+            It is created using HTML and CSS without JavaScript.
+        </p>
+
+        <label for="modal-toggle" class="close-button">
+            Close
+        </label>
+
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+```html id="xj3kq8"
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Width, Height and Sizing</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            min-height: 400px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border: 2px solid darkblue;
+        }
+
+        /* Fixed Width and Height */
+        .fixed {
+            width: 300px;
+            height: 150px;
+            background-color: lightblue;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid blue;
+        }
+
+        /* Percentage Width */
+        .percentage {
+            width: 70%;
+            height: 100px;
+            background-color: lightgreen;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid green;
+        }
+
+        /* Minimum and Maximum Width */
+        .responsive {
+            width: 80%;
+            min-width: 250px;
+            max-width: 600px;
+            height: 120px;
+            background-color: lightyellow;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid orange;
+        }
+
+        /* Viewport Sizing */
+        .viewport {
+            width: 50vw;
+            height: 15vh;
+            background-color: lightpink;
+            margin: 20px auto;
+            padding: 20px;
+            border: 2px solid red;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Width, Height and Sizing Properties</h1>
+
+    <div class="container">
+
+        <!-- Fixed Width and Height -->
+        <div class="fixed">
+            <h3>Fixed Size</h3>
+            <p>Width: 300px</p>
+            <p>Height: 150px</p>
+        </div>
+
+        <!-- Percentage Width -->
+        <div class="percentage">
+            <h3>Percentage Size</h3>
+            <p>Width: 70%</p>
+            <p>Height: 100px</p>
+        </div>
+
+        <!-- Min and Max Width -->
+        <div class="responsive">
+            <h3>Minimum and Maximum Width</h3>
+            <p>Min-width: 250px</p>
+            <p>Max-width: 600px</p>
+        </div>
+
+        <!-- Viewport Units -->
+        <div class="viewport">
+            <h3>Viewport Size</h3>
+            <p>Width: 50vw | Height: 15vh</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

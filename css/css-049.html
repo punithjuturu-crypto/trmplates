@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Three Column Layout Using Flexbox</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+        }
+
+        header {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+        }
+
+        .column {
+            flex: 1;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px gray;
+        }
+
+        .column h2 {
+            text-align: center;
+        }
+
+        footer {
+            background: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Three Column Layout</h1>
+    </header>
+
+    <div class="container">
+
+        <div class="column">
+            <h2>Column 1</h2>
+            <p>
+                This is the first column.
+                Flexbox is used to create this layout.
+            </p>
+        </div>
+
+        <div class="column">
+            <h2>Column 2</h2>
+            <p>
+                This is the second column.
+                All three columns have equal width.
+            </p>
+        </div>
+
+        <div class="column">
+            <h2>Column 3</h2>
+            <p>
+                This is the third column.
+                The layout becomes vertical on small screens.
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2026 My Website</p>
+    </footer>
+
+</body>
+</html>

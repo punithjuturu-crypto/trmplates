@@ -1,0 +1,95 @@
+```html id="x5m8qa"
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Inheritance and Specificity</title>
+
+    <style>
+
+        /* Element selector */
+        body {
+            font-family: Arial, sans-serif;
+            color: darkblue;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        /* Inheritance */
+        .parent {
+            color: green;
+            font-size: 20px;
+        }
+
+        /* Class selector */
+        .text {
+            color: purple;
+        }
+
+        /* ID selector has higher specificity */
+        #special {
+            color: red;
+        }
+
+        /* Element + class selector */
+        p.text {
+            color: orange;
+        }
+
+        /* ID + class selector has higher specificity */
+        #special.text {
+            color: darkred;
+        }
+
+        .box {
+            width: 600px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: white;
+            border: 2px solid darkblue;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <h1>CSS Inheritance and Specificity</h1>
+
+        <div class="parent">
+
+            <h2>Inheritance Example</h2>
+
+            <p>
+                This paragraph inherits the green color
+                from its parent element.
+            </p>
+
+        </div>
+
+        <h2>Specificity Example</h2>
+
+        <p class="text">
+            This paragraph is styled using a class selector.
+        </p>
+
+        <p id="special" class="text">
+            This paragraph uses both ID and class selectors.
+            The ID selector has higher specificity.
+        </p>
+
+        <p class="text">
+            CSS specificity determines which style is applied
+            when multiple rules target the same element.
+        </p>
+
+    </div>
+
+</body>
+</html>
+```

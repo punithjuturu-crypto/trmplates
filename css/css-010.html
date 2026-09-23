@@ -1,0 +1,88 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Pseudo-Classes</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+            padding: 40px;
+        }
+
+        a {
+            display: inline-block;
+            margin: 15px;
+            padding: 12px 20px;
+            text-decoration: none;
+            border: 2px solid blue;
+        }
+
+        /* :hover */
+        a:hover {
+            background-color: blue;
+            color: white;
+        }
+
+        /* :active */
+        a:active {
+            background-color: red;
+            color: white;
+        }
+
+        /* :visited */
+        a:visited {
+            color: purple;
+        }
+
+        /* :focus */
+        input:focus {
+            background-color: lightyellow;
+            border: 3px solid green;
+            outline: none;
+        }
+
+        input {
+            padding: 12px;
+            margin: 20px;
+        }
+
+        button:hover {
+            background-color: green;
+            color: white;
+        }
+
+        button:active {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Pseudo-Classes</h1>
+
+    <a href="https://www.google.com" target="_blank">
+        Visit Google
+    </a>
+
+    <br>
+
+    <input type="text" placeholder="Click here and type">
+
+    <br>
+
+    <button>Hover or Click Me</button>
+
+    <p>
+        Try hovering, clicking, and focusing on the elements
+        to see the pseudo-class effects.
+    </p>
+
+</body>
+</html>
+```

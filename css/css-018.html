@@ -1,0 +1,95 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Animation</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        .box {
+            width: 150px;
+            height: 150px;
+            background-color: lightblue;
+            border: 3px solid blue;
+            margin: 80px auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-weight: bold;
+
+            /* Animation */
+            animation: moveBox 3s infinite alternate;
+        }
+
+        /* Animation Keyframes */
+        @keyframes moveBox {
+
+            0% {
+                transform: translateX(-200px);
+                background-color: lightblue;
+            }
+
+            50% {
+                transform: translateX(0);
+                background-color: lightgreen;
+            }
+
+            100% {
+                transform: translateX(200px);
+                background-color: lightpink;
+            }
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            background-color: orange;
+            border-radius: 50%;
+            margin: 50px auto;
+
+            animation: rotateCircle 2s linear infinite;
+        }
+
+        @keyframes rotateCircle {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Animation</h1>
+
+    <p>The boxes are animated using CSS keyframes.</p>
+
+    <div class="box">
+        Moving car
+    </div>
+
+    <div class="circle"></div>
+
+</body>
+</html>
+```

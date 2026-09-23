@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fixed Sidebar</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Fixed Sidebar */
+        .sidebar {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 220px;
+            height: 100vh;
+            background: #222;
+            padding-top: 20px;
+        }
+
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+        }
+
+        .sidebar a:hover {
+            background: #555;
+        }
+
+        /* Main Content */
+        .main {
+            margin-left: 220px;
+            padding: 30px;
+        }
+
+        .section {
+            min-height: 400px;
+            padding: 30px;
+            margin-bottom: 20px;
+            background: #f2f2f2;
+            border-radius: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .sidebar {
+                width: 160px;
+            }
+
+            .main {
+                margin-left: 160px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sidebar">
+        <h2>My Menu</h2>
+
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Courses</a>
+        <a href="#">Students</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="main">
+
+        <div class="section">
+            <h1>Fixed Sidebar</h1>
+            <p>
+                This webpage demonstrates a fixed sidebar using CSS.
+            </p>
+            <p>
+                The sidebar remains visible even when the page is scrolled.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>About</h2>
+            <p>
+                This is the about section of the webpage.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Courses</h2>
+            <p>
+                HTML, CSS, JavaScript and Python courses are available.
+            </p>
+        </div>
+
+        <div class="section">
+            <h2>Contact</h2>
+            <p>
+                Contact us for more information.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>

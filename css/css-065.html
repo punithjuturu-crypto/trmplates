@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transitions</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .box {
+            width: 180px;
+            height: 180px;
+            background: #2563eb;
+            color: white;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 10px;
+
+            /* Transition property */
+            transition: all 0.5s ease;
+        }
+
+        /* Background color transition */
+        .color:hover {
+            background: #dc2626;
+        }
+
+        /* Size transition */
+        .size:hover {
+            transform: scale(1.2);
+        }
+
+        /* Rotation transition */
+        .rotate:hover {
+            transform: rotate(20deg);
+        }
+
+        /* Movement transition */
+        .move:hover {
+            transform: translateY(-30px);
+        }
+
+        /* Multiple transitions */
+        .multiple:hover {
+            background: #16a34a;
+            transform: scale(1.1) rotate(5deg);
+            border-radius: 50%;
+        }
+
+        .description {
+            margin-top: 40px;
+            background: white;
+            padding: 25px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>CSS Transition Demonstration</h1>
+
+<div class="container">
+
+    <div class="box color">
+        Color
+    </div>
+
+    <div class="box size">
+        Scale
+    </div>
+
+    <div class="box rotate">
+        Rotate
+    </div>
+
+    <div class="box move">
+        Move
+    </div>
+
+    <div class="box multiple">
+        Multiple
+    </div>
+
+</div>
+
+<div class="description">
+
+    <h2>How It Works</h2>
+
+    <p>
+        Move your mouse over each box to see the CSS
+        transition effects.
+    </p>
+
+    <br>
+
+    <p>
+        The <strong>transition</strong> property makes
+        changes happen smoothly instead of instantly.
+    </p>
+
+</div>
+
+</body>
+</html>

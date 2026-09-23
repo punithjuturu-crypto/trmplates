@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Card Animation</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #e2e8f0;
+            text-align: center;
+            padding: 50px 20px;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            margin-bottom: 40px;
+        }
+
+        .slider {
+            width: 350px;
+            height: 250px;
+
+            margin: auto;
+
+            position: relative;
+            overflow: hidden;
+
+            border-radius: 15px;
+            box-shadow: 0 5px 15px #999;
+        }
+
+        .card {
+            width: 350px;
+            height: 250px;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            color: white;
+        }
+
+        .card h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            font-size: 18px;
+        }
+
+        .card1 {
+            background: #2563eb;
+            animation: slide1 9s infinite;
+        }
+
+        .card2 {
+            background: #16a34a;
+            animation: slide2 9s infinite;
+        }
+
+        .card3 {
+            background: #dc2626;
+            animation: slide3 9s infinite;
+        }
+
+        @keyframes slide1 {
+
+            0%, 30% {
+                transform: translateX(0);
+            }
+
+            33%, 100% {
+                transform: translateX(-100%);
+            }
+
+        }
+
+        @keyframes slide2 {
+
+            0%, 30% {
+                transform: translateX(100%);
+            }
+
+            33%, 63% {
+                transform: translateX(0);
+            }
+
+            66%, 100% {
+                transform: translateX(-100%);
+            }
+
+        }
+
+        @keyframes slide3 {
+
+            0%, 63% {
+                transform: translateX(100%);
+            }
+
+            66%, 96% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+
+        }
+
+        .info {
+            max-width: 700px;
+            margin: 40px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Sliding Card Animation</h1>
+
+<div class="slider">
+
+    <div class="card card1">
+        <h2>🌄 Travel</h2>
+        <p>Explore beautiful places.</p>
+    </div>
+
+    <div class="card card2">
+        <h2>🍔 Food</h2>
+        <p>Discover delicious food.</p>
+    </div>
+
+    <div class="card card3">
+        <h2>💻 Technology</h2>
+        <p>Learn modern technology.</p>
+    </div>
+
+</div>
+
+<div class="info">
+
+    <h2>CSS Sliding Animation</h2>
+
+    <p>
+        The cards automatically slide from right to left
+        using CSS keyframes and transform properties.
+    </p>
+
+</div>
+
+</body>
+</html>

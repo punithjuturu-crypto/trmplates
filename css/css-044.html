@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Fit and Object Position</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f2f2f2;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 30px;
+        }
+
+        .box {
+            width: 250px;
+        }
+
+        .box img {
+            width: 250px;
+            height: 180px;
+            border: 3px solid black;
+        }
+
+        .fill img {
+            object-fit: fill;
+        }
+
+        .contain img {
+            object-fit: contain;
+        }
+
+        .cover img {
+            object-fit: cover;
+        }
+
+        .top img {
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .bottom img {
+            object-fit: cover;
+            object-position: bottom;
+        }
+
+        .center img {
+            object-fit: cover;
+            object-position: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Object-Fit and Object-Position</h1>
+
+    <div class="container">
+
+        <div class="box fill">
+            <h2>Fill</h2>
+            <img src="https://picsum.photos/id/1025/400/250">
+        </div>
+
+        <div class="box contain">
+            <h2>Contain</h2>
+            <img src="https://picsum.photos/id/1025/400/250">
+        </div>
+
+        <div class="box cover">
+            <h2>Cover</h2>
+            <img src="https://picsum.photos/id/1025/400/250">
+        </div>
+
+        <div class="box top">
+            <h2>Position: Top</h2>
+            <img src="https://picsum.photos/id/1025/400/250">
+        </div>
+
+        <div class="box center">
+            <h2>Position: Center</h2>
+            <img src="https://picsum.photos/id/1025/400/250">
+        </div>
+
+        <div class="box bottom">
+            <h2>Position: Bottom</h2>
+            <img src="https://picsum.photos/id/1025/400/250">
+        </div>
+
+    </div>
+
+</body>
+</html>

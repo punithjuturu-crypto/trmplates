@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Calc Function</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+        }
+
+        header {
+            height: 80px;
+            background: #0f172a;
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /*
+            Width calculation:
+            100% of parent - 40px
+        */
+
+        .container {
+            width: calc(100% - 40px);
+            max-width: 1100px;
+
+            margin: 30px auto;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            /*
+                Width calculation
+            */
+
+            width: calc(100% - 10px);
+
+            /*
+                Height calculation
+            */
+
+            min-height: calc(200px + 20px);
+
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 4px 10px #ccc;
+        }
+
+        .card h2 {
+            color: #2563eb;
+            margin-bottom: 15px;
+        }
+
+        .banner {
+            width: calc(100% - 60px);
+
+            margin: 30px auto;
+
+            padding: calc(20px + 10px);
+
+            background: #dbeafe;
+
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .banner h2 {
+            font-size: calc(20px + 2vw);
+            color: #1d4ed8;
+        }
+
+        @media (max-width: 700px) {
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>CSS calc() Function</h1>
+</header>
+
+<div class="banner">
+
+    <h2>Responsive Calculation</h2>
+
+    <p>
+        CSS calc() allows mathematical calculations
+        inside CSS properties.
+    </p>
+
+</div>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Width Calculation</h2>
+        <p>
+            This card uses calc() to calculate its width.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Height Calculation</h2>
+        <p>
+            calc() can also be used for height calculations.
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Padding Calculation</h2>
+        <p>
+            Padding can be calculated using calc().
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Font Calculation</h2>
+        <p>
+            Font size can also use mathematical calculations.
+        </p>
+    </div>
+
+</div>
+
+</body>
+</html>

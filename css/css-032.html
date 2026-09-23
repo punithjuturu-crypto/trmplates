@@ -1,0 +1,87 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Box Shadow and Text Shadow</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eeeeee;
+            text-align: center;
+            padding: 50px;
+        }
+
+        h1 {
+            color: darkblue;
+
+            /* Text Shadow */
+            text-shadow: 3px 3px 5px gray;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 250px;
+            height: 180px;
+            background-color: rgb(56, 159, 118);
+            padding: 30px;
+
+            /* Box Shadow */
+            box-shadow: 8px 8px 15px gray;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            border-radius: 10px;
+        }
+
+        .box h2 {
+            color: rgb(139, 0, 88);
+
+            /* Text Shadow */
+            text-shadow: 2px 2px 3px #aaaaaa;
+        }
+
+        .strong-shadow {
+            box-shadow:
+                0 0 20px darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Shadows</h1>
+
+    <div class="container">
+
+        <div class="box">
+            <h2>Box Shadow</h2>
+            <p>
+                This box uses box-shadow.
+            </p>
+        </div>
+
+        <div class="box strong-shadow">
+            <h2>Shadow Effect</h2>
+            <p>
+                This box has a glowing shadow.
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

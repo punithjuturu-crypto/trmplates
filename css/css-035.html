@@ -1,0 +1,128 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Overflow</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 250px;
+            height: 150px;
+            background-color: white;
+            border: 3px solid darkblue;
+            padding: 15px;
+        }
+
+        /* Visible Overflow */
+        .visible {
+            overflow: visible;
+        }
+
+        /* Hidden Overflow */
+        .hidden {
+            overflow: hidden;
+        }
+
+        /* Scroll Overflow */
+        .scroll {
+            overflow: scroll;
+        }
+
+        /* Auto Overflow */
+        .auto {
+            overflow: auto;
+        }
+
+        .content {
+            width: 400px;
+            height: 250px;
+            background-color: lightblue;
+            padding: 15px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Overflow Properties</h1>
+
+    <div class="container">
+
+        <div class="box visible">
+
+            <h2>Visible</h2>
+
+            <p>
+                This is a long text used to demonstrate
+                the visible overflow property. When the content
+                is larger than the box, it remains visible outside
+                the box.
+            </p>
+
+        </div>
+
+
+        <div class="box hidden">
+
+            <h2>Hidden</h2>
+
+            <p>
+                This is a long text used to demonstrate
+                the hidden overflow property. Extra content
+                is hidden outside the box.
+            </p>
+
+        </div>
+
+
+        <div class="box scroll">
+
+            <h2>Scroll</h2>
+
+            <p>
+                This is a long text used to demonstrate
+                the scroll overflow property. Scrollbars are
+                provided so the user can view the extra content.
+            </p>
+
+        </div>
+
+
+        <div class="box auto">
+
+            <h2>Auto</h2>
+
+            <p>
+                This is a long text used to demonstrate
+                the auto overflow property.
+            </p>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

@@ -1,0 +1,198 @@
+```html id="m2k7qd"
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Positioning</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+        }
+
+        /* Heading */
+        h1 {
+            text-align: center;
+            color: darkblue;
+            padding: 20px;
+        }
+
+        /* 1. Static Position */
+        .static-box {
+            position: static;
+            width: 300px;
+            padding: 20px;
+            margin: 20px auto;
+            background-color: lightblue;
+            border: 2px solid blue;
+        }
+
+        /* 2. Relative Position */
+        .relative-box {
+            position: relative;
+            left: 50px;
+            width: 300px;
+            padding: 20px;
+            margin: 20px auto;
+            background-color: lightgreen;
+            border: 2px solid green;
+        }
+
+        /* Parent for Absolute Position */
+        .parent {
+            position: relative;
+            width: 500px;
+            height: 250px;
+            margin: 40px auto;
+            background-color: white;
+            border: 3px solid purple;
+        }
+
+        /* 3. Absolute Position */
+        .absolute-box {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            width: 180px;
+            padding: 20px;
+            background-color: lightpink;
+            border: 2px solid red;
+        }
+
+        /* 4. Fixed Position */
+        .fixed-box {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: darkblue;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+        }
+
+        /* 5. Sticky Position */
+        .sticky-box {
+            position: sticky;
+            top: 0;
+            background-color: orange;
+            color: black;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            z-index: 10;
+        }
+
+        /* Extra content to create scrolling */
+        .content {
+            width: 80%;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: white;
+            line-height: 2;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Positioning Examples</h1>
+
+    <!-- Static -->
+    <div class="static-box">
+        <h2>Static</h2>
+        <p>
+            This element uses position: static.
+        </p>
+    </div>
+
+    <!-- Relative -->
+    <div class="relative-box">
+        <h2>Relative</h2>
+        <p>
+            This element is moved 50px from its normal position.
+        </p>
+    </div>
+
+    <!-- Sticky -->
+    <div class="sticky-box">
+        Sticky Element - Scroll the page
+    </div>
+
+    <!-- Absolute -->
+    <div class="parent">
+
+        <h2>Parent Element</h2>
+
+        <p>
+            The parent has position: relative.
+        </p>
+
+        <div class="absolute-box">
+            <h3>Absolute</h3>
+            <p>
+                Positioned relative to the parent.
+            </p>
+        </div>
+
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <h2>Scrolling Content</h2>
+
+        <p>
+            CSS positioning controls how an element is placed
+            on a webpage.
+        </p>
+
+        <p>
+            Static positioning follows the normal document flow.
+        </p>
+
+        <p>
+            Relative positioning moves an element relative to
+            its normal position.
+        </p>
+
+        <p>
+            Absolute positioning places an element relative to
+            its positioned parent.
+        </p>
+
+        <p>
+            Fixed positioning keeps an element in the same
+            position on the screen while scrolling.
+        </p>
+
+        <p>
+            Sticky positioning behaves like relative positioning
+            until a specified scrolling position is reached.
+        </p>
+
+        <p>
+            Scroll down and observe the sticky and fixed elements.
+        </p>
+
+        <p>
+            CSS positioning is useful for creating modern
+            webpage layouts and user interfaces.
+        </p>
+
+    </div>
+
+    <!-- Fixed -->
+    <div class="fixed-box">
+        Fixed Element
+    </div>
+
+</body>
+</html>
+```

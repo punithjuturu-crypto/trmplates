@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile First Website</title>
+
+    <style>
+        /* Base styles are designed for mobile first */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+        }
+
+        header {
+            background: #059669;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            background: #047857;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .hero {
+            padding: 50px 20px;
+            text-align: center;
+            background: #d1fae5;
+        }
+
+        .hero h2 {
+            font-size: 32px;
+            color: #047857;
+        }
+
+        .hero p {
+            margin-top: 15px;
+        }
+
+        .content {
+            padding: 30px 20px;
+
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px #ccc;
+        }
+
+        .card h3 {
+            color: #059669;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background: #064e3b;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Tablet */
+        @media (min-width: 600px) {
+
+            nav {
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Desktop */
+        @media (min-width: 900px) {
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px 8%;
+            }
+
+            nav {
+                margin-top: 0;
+            }
+
+            .content {
+                grid-template-columns: repeat(3, 1fr);
+                padding: 50px 8%;
+            }
+
+            .hero {
+                padding: 100px 20px;
+            }
+
+            .hero h2 {
+                font-size: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>A to Z site </h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+    </nav>
+
+</header>
+
+<section class="hero">
+    <h2>Welcome to My Website</h2>
+    <p>This webpage follows a mobile-first design approach.</p>
+</section>
+
+<section class="content">
+
+    <div class="card">
+        <h3>Web Design</h3>
+        <p>Creating attractive and responsive websites.</p>
+    </div>
+
+    <div class="card">
+        <h3>Development</h3>
+        <p>Building websites using modern technologies.</p>
+    </div>
+
+    <div class="card">
+        <h3>Responsive Design</h3>
+        <p>Websites that work on different screen sizes.</p>
+    </div>
+
+</section>
+
+<footer>
+    <p>© 2026 Mobile First Website</p>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Tooltip</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 100px;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            background: blue;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 5px;
+        }
+
+        .tooltip-text {
+            visibility: hidden;
+            width: 180px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            border-radius: 6px;
+
+            position: absolute;
+            bottom: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: black transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Tooltip</h1>
+
+    <div class="tooltip">
+        Hover Me
+
+        <span class="tooltip-text">
+            This is a CSS tooltip!
+        </span>
+    </div>
+
+</body>
+</html>

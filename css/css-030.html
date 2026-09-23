@@ -1,0 +1,104 @@
+```html id="w0x9g4"
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Background Images</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 30px;
+            color: darkblue;
+        }
+
+        .background {
+            height: 300px;
+            margin: 30px;
+            border: 3px solid darkblue;
+
+            background-image:
+                url("https://picsum.photos/id/1015/1200/600");
+
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .center {
+            background-position: center;
+        }
+
+        .top {
+            background-position: top;
+        }
+
+        .bottom {
+            background-position: bottom;
+        }
+
+        .left {
+            background-position: left;
+        }
+
+        .right {
+            background-position: right;
+        }
+
+        .box-title {
+            background-color: white;
+            padding: 10px;
+            display: inline-block;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Background Images and Positioning</h1>
+
+    <div class="background center">
+        <span class="box-title">
+            Background Position: Center
+        </span>
+    </div>
+
+    <div class="background top">
+        <span class="box-title">
+            Background Position: Top
+        </span>
+    </div>
+
+    <div class="background bottom">
+        <span class="box-title">
+            Background Position: Bottom
+        </span>
+    </div>
+
+    <div class="background left">
+        <span class="box-title">
+            Background Position: Left
+        </span>
+    </div>
+
+    <div class="background right">
+        <span class="box-title">
+            Background Position: Right
+        </span>
+    </div>
+
+</body>
+</html>
+```

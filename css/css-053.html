@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Login and Signup</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #e8f0fe;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            padding: 30px;
+        }
+
+        .form-box {
+            background: white;
+            width: 400px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px gray;
+        }
+
+        .form-box h2 {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: blue;
+        }
+
+        .button {
+            width: 100%;
+            padding: 12px;
+            background: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .button:hover {
+            background: darkblue;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .link a {
+            color: blue;
+            text-decoration: none;
+        }
+
+        @media (max-width: 850px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .form-box {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Login Form -->
+        <div class="form-box">
+
+            <h2>Login</h2>
+
+            <form>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+
+                <button class="button" type="submit">
+                    Login
+                </button>
+            </form>
+
+            <div class="link">
+                <p>Forgot Password?</p>
+            </div>
+
+        </div>
+
+        <!-- Signup Form -->
+        <div class="form-box">
+
+            <h2>Sign Up</h2>
+
+            <form>
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" placeholder="Create a password" required>
+                </div>
+
+                <button class="button" type="submit">
+                    Sign Up
+                </button>
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

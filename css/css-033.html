@@ -1,0 +1,113 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Border Radius Shapes</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .shape {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Rounded Rectangle */
+        .rounded {
+            background-color: blue;
+            border-radius: 20px;
+        }
+
+        /* Circle */
+        .circle {
+            background-color: green;
+            border-radius: 50%;
+        }
+
+        /* Oval */
+        .oval {
+            width: 220px;
+            background-color: orange;
+            border-radius: 50%;
+        }
+
+        /* Top Rounded */
+        .top-rounded {
+            background-color: purple;
+            border-radius: 70px 70px 0 0;
+        }
+
+        /* Bottom Rounded */
+        .bottom-rounded {
+            background-color: red;
+            border-radius: 0 0 70px 70px;
+        }
+
+        /* Custom Shape */
+        .custom {
+            background-color: teal;
+            border-radius: 10px 50px 10px 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Border Radius Shapes</h1>
+
+    <div class="container">
+
+        <div class="shape rounded">
+            Rounded
+        </div>
+
+        <div class="shape circle">
+            Circle
+        </div>
+
+        <div class="shape oval">
+            Oval
+        </div>
+
+        <div class="shape top-rounded">
+            Top Rounded
+        </div>
+
+        <div class="shape bottom-rounded">
+            Bottom Rounded
+        </div>
+
+        <div class="shape custom">
+            Custom Shape
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

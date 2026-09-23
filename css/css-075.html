@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Complete Responsive Website</title>
+
+    <style>
+
+        /* =========================
+           BASIC RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f8fafc;
+            color: #1e293b;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: #0f172a;
+            color: white;
+
+            padding: 20px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h1 {
+            color: #60a5fa;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 550px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 60px 8%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #dbeafe,
+                    #eff6ff
+                );
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h2 {
+            font-size: 55px;
+            color: #1d4ed8;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+
+            padding: 14px 30px;
+
+            background: #2563eb;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 8px;
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+            transform: translateY(-3px);
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            padding: 80px 8%;
+
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+
+            background: white;
+        }
+
+        .about h2 {
+            font-size: 40px;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .about-box {
+            padding: 40px;
+
+            background: #dbeafe;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            font-size: 60px;
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .services h2 {
+            font-size: 40px;
+            margin-bottom: 40px;
+            color: #2563eb;
+        }
+
+        .service-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .service-card {
+            background: white;
+
+            padding: 35px 25px;
+
+            border-radius: 12px;
+
+            box-shadow:
+                0 4px 12px rgba(0,0,0,0.1);
+
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .service-card .icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            color: #1d4ed8;
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects {
+            padding: 80px 8%;
+            background: white;
+            text-align: center;
+        }
+
+        .projects h2 {
+            font-size: 40px;
+            color: #2563eb;
+            margin-bottom: 40px;
+        }
+
+        .project-container {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 25px;
+        }
+
+        .project {
+            flex: 1 1 280px;
+
+            max-width: 350px;
+
+            padding: 30px;
+
+            background: #f1f5f9;
+
+            border-radius: 12px;
+        }
+
+        .project h3 {
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            padding: 80px 8%;
+
+            text-align: center;
+
+            background: #dbeafe;
+        }
+
+        .contact h2 {
+            font-size: 40px;
+            color: #1d4ed8;
+
+            margin-bottom: 20px;
+        }
+
+        .contact p {
+            margin: 10px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #0f172a;
+
+            color: white;
+
+            padding: 30px;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                padding: 20px 5%;
+            }
+
+            .hero h2 {
+                font-size: 45px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .service-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+
+                gap: 15px;
+
+                text-align: center;
+            }
+
+            nav {
+                gap: 12px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 14px;
+            }
+
+            .hero {
+                min-height: 450px;
+            }
+
+            .hero h2 {
+                font-size: 36px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            .about {
+                padding: 60px 5%;
+            }
+
+            .about h2 {
+                font-size: 32px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services,
+            .projects,
+            .contact {
+                padding: 60px 5%;
+            }
+
+            .services h2,
+            .projects h2,
+            .contact h2 {
+                font-size: 32px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <h1>WebWorld</h1>
+
+    <nav>
+
+        <a href="#home">Home</a>
+
+        <a href="#about">About</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#projects">Projects</a>
+
+        <a href="#contact">Contact</a>
+
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section id="home" class="hero">
+
+    <div class="hero-content">
+
+        <h2>
+            we build a fast response web site
+        </h2>
+
+        <p>
+            We create modern, responsive and
+            user-friendly websites.
+        </p>
+
+        <a href="#services" class="button">
+            Explore Services
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="about" class="about">
+
+    <div>
+
+        <h2>About Us</h2>
+
+        <p>
+            WebWorld is a modern web development
+            platform focused on creating beautiful
+            and responsive websites.
+        </p>
+
+        <br>
+
+        <p>
+            We use HTML5, CSS3, Flexbox, Grid and
+            modern responsive design techniques.
+        </p>
+
+    </div>
+
+    <div class="about-box">
+
+        💻
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="services" class="services">
+
+    <h2>Our Services</h2>
+
+    <div class="service-grid">
+
+        <div class="service-card">
+
+            <div class="icon">
+                🌐
+            </div>
+
+            <h3>Web Design</h3>
+
+            <p>
+                Attractive and modern website designs.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">
+                📱
+            </div>
+
+            <h3>Responsive Design</h3>
+
+            <p>
+                Websites that work on mobile,
+                tablet and desktop.
+            </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+            <div class="icon">
+                ⚡
+            </div>
+
+            <h3>Web Development</h3>
+
+            <p>
+                Fast and interactive websites.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects" class="projects">
+
+    <h2>Our Projects</h2>
+
+    <div class="project-container">
+
+        <div class="project">
+
+            <h3>Restaurant Website</h3>
+
+            <p>
+                Responsive restaurant website
+                created using HTML and CSS.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>Shopping Website</h3>
+
+            <p>
+                Online shopping interface with
+                responsive product cards.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>Travel Website</h3>
+
+            <p>
+                Travel website with destinations
+                and responsive layouts.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact" class="contact">
+
+    <h2>Contact Us</h2>
+
+    <p>📧 Email: example@gmail.com</p>
+
+    <p>📱 Phone: +91 9876543210</p>
+
+    <p>📍 India</p>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 WebWorld | All Rights Reserved
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel World</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background: #006994;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        .hero {
+            min-height: 500px;
+            background: linear-gradient(
+                rgba(0,0,0,.5),
+                rgba(0,0,0,.5)
+            ),
+            linear-gradient(120deg, #42a5f5, #80cbc4);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 22px;
+        }
+
+        .destinations {
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        .destinations h2 {
+            color: #006994;
+            margin-bottom: 30px;
+        }
+
+        .places {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .place {
+            width: 280px;
+            padding: 40px 20px;
+            background: #e0f7fa;
+            border-radius: 12px;
+        }
+
+        .place .emoji {
+            font-size: 60px;
+        }
+
+        .place h3 {
+            margin: 15px 0;
+        }
+
+        footer {
+            background: #003b50;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero h2 {
+                font-size: 38px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🌍 TravelWorld</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Destinations</a>
+        <a href="#">Packages</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h2>Explore The World</h2>
+        <p>Discover beautiful places and create unforgettable memories.</p>
+    </div>
+</section>
+
+<section class="destinations">
+    <h2>Popular Destinations</h2>
+
+    <div class="places">
+
+        <div class="place">
+            <div class="emoji">🏔️</div>
+            <h3>Manali</h3>
+            <p>Enjoy mountains, snow and beautiful valleys.</p>
+        </div>
+
+        <div class="place">
+            <div class="emoji">🏖️</div>
+            <h3>Goa</h3>
+            <p>Relax on beautiful beaches and enjoy the sea.</p>
+        </div>
+
+        <div class="place">
+            <div class="emoji">🏛️</div>
+            <h3>Dubai</h3>
+            <p>Explore history, culture and delicious food.</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 TravelWorld | Explore • Travel • Enjoy</p>
+</footer>
+
+</body>
+</html>

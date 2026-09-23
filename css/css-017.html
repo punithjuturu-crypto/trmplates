@@ -1,0 +1,95 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Transitions and Transformations</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: darkblue;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .box {
+            width: 180px;
+            height: 180px;
+            background-color: lightblue;
+            border: 3px solid blue;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-weight: bold;
+
+            /* Transition */
+            transition: all 0.5s ease;
+        }
+
+        /* Scale */
+        .scale:hover {
+            transform: scale(1.2);
+        }
+
+        /* Rotate */
+        .rotate:hover {
+            transform: rotate(45deg);
+        }
+
+        /* Translate */
+        .translate:hover {
+            transform: translateY(-30px);
+        }
+
+        /* Skew */
+        .skew:hover {
+            transform: skew(15deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Transitions and Transformations</h1>
+
+    <p>Move your mouse over the boxes.</p>
+
+    <div class="container">
+
+        <div class="box scale">
+            Scale
+        </div>
+
+        <div class="box rotate">
+            Rotate
+        </div>
+
+        <div class="box translate">
+            Translate
+        </div>
+
+        <div class="box skew">
+            Skew
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

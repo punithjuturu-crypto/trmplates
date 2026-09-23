@@ -1,0 +1,103 @@
+```html id="1a6g0f"
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Variables</title>
+
+    <style>
+
+        /* CSS Variables */
+        :root {
+            --primary-color: darkblue;
+            --secondary-color: lightblue;
+            --text-color: #333;
+            --box-padding: 25px;
+            --border-radius: 10px;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--text-color);
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: var(--box-padding);
+            text-align: center;
+        }
+
+        .container {
+            width: 80%;
+            margin: 30px auto;
+            padding: var(--box-padding);
+            background-color: white;
+            border: 3px solid var(--primary-color);
+            border-radius: var(--border-radius);
+        }
+
+        .card {
+            padding: var(--box-padding);
+            margin: 15px 0;
+            background-color: var(--secondary-color);
+            border-radius: var(--border-radius);
+        }
+
+        .button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+        }
+
+        .button:hover {
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>CSS Variables</h1>
+        <p>Custom Properties Demonstration</p>
+    </header>
+
+    <div class="container">
+
+        <h2>Using CSS Custom Properties</h2>
+
+        <div class="card">
+            <h3>Card One</h3>
+            <p>
+                This card uses CSS variables for colors,
+                padding and border radius.
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>Card Two</h3>
+            <p>
+                Variables make it easier to reuse the same
+                values throughout a webpage.
+            </p>
+        </div>
+
+        <button class="button">
+            Click Me
+        </button>
+
+    </div>
+
+</body>
+</html>
+```

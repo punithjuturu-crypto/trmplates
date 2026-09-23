@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Restaurant</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff8f0;
+            color: #333;
+        }
+
+        header {
+            background: #8b0000;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 28px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: #ffcc80;
+        }
+
+        .hero h2 {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        .menu {
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        .menu h2 {
+            margin-bottom: 30px;
+            color: #8b0000;
+        }
+
+        .cards {
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            width: 250px;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px #ccc;
+        }
+
+        .card h3 {
+            color: #8b0000;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        footer {
+            background: #8b0000;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>🍴 Delicious</h1>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Welcome to Delicious</h2>
+    <p>Fresh food • Great taste • Happy moments</p>
+</section>
+
+<section class="menu">
+    <h2>Our Special Menu</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🍕 Pizza</h3>
+            <p>Cheesy vegetable pizza with fresh toppings.</p>
+            <p class="price">₹249</p>
+        </div>
+
+        <div class="card">
+            <h3>🍔 Burger</h3>
+            <p>Juicy burger with crispy fries.</p>
+            <p class="price">₹199</p>
+        </div>
+
+        <div class="card">
+            <h3>🍝 Pasta</h3>
+            <p>Creamy Italian pasta with vegetables.</p>
+            <p class="price">₹229</p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Delicious Restaurant | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

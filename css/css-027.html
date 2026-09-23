@@ -1,0 +1,94 @@
+```html id="8v6q1k"
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Basic Selectors</title>
+
+    <style>
+
+        /* 1. Universal Selector */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* 2. Element Selector */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        /* 3. Class Selector */
+        .description {
+            color: green;
+            font-size: 18px;
+        }
+
+        /* 4. ID Selector */
+        #heading {
+            color: darkblue;
+            text-align: center;
+        }
+
+        /* 5. Attribute Selector */
+        input[type="text"] {
+            border: 3px solid blue;
+            padding: 10px;
+        }
+
+        /* 6. Grouping Selector */
+        h2, h3 {
+            color: darkred;
+        }
+
+        .box {
+            width: 600px;
+            margin: auto;
+            padding: 25px;
+            background-color: white;
+            border: 2px solid #333;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+
+        <!-- ID Selector -->
+        <h1 id="heading">
+            CSS Selectors
+        </h1>
+
+        <!-- Class Selector -->
+        <p class="description">
+            This paragraph demonstrates a class selector.
+        </p>
+
+        <!-- Grouping Selector -->
+        <h2>Element Selector</h2>
+
+        <p>
+            The body, h1, h2 and p elements can be
+            selected using element selectors.
+        </p>
+
+        <h3>Attribute Selector</h3>
+
+        <!-- Attribute Selector -->
+        <input type="text" placeholder="Enter your name">
+
+        <br><br>
+
+        <input type="email" placeholder="Enter your email">
+
+    </div>
+
+</body>
+</html>
+```

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visibility and Hiding Elements</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .box {
+            display: inline-block;
+            width: 180px;
+            height: 100px;
+            margin: 15px;
+            padding: 20px;
+            background: lightblue;
+            border: 2px solid black;
+        }
+
+        .hidden-visibility {
+            visibility: hidden;
+        }
+
+        .hidden-display {
+            display: none;
+        }
+
+        .transparent {
+            opacity: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Visibility and Hiding Elements</h1>
+
+    <div class="box">
+        Visible Box
+    </div>
+
+    <div class="box hidden-visibility">
+        visibility: hidden
+    </div>
+
+    <div class="box hidden-display">
+        display: none
+    </div>
+
+    <div class="box transparent">
+        opacity: 0
+    </div>
+
+    <div class="box">
+        Another Visible Box
+    </div>
+
+    <p>
+        The hidden elements demonstrate different ways of hiding content.
+    </p>
+
+</body>
+</html>

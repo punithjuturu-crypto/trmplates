@@ -1,0 +1,130 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Lists and Tables</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        .container {
+            width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        /* List styling */
+        ul {
+            list-style-type: square;
+        }
+
+        ol {
+            list-style-type: upper-roman;
+        }
+
+        li {
+            padding: 8px;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 2px solid #333;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: darkblue;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eeeeee;
+        }
+
+        tr:hover {
+            background-color: lightblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CSS Lists and Tables</h1>
+
+        <h2>Unordered List</h2>
+
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ul>
+
+        <h2>Ordered List</h2>
+
+        <ol>
+            <li>Web Development</li>
+            <li>Database</li>
+            <li>Programming</li>
+            <li>Networking</li>
+        </ol>
+
+        <h2>Student Table</h2>
+
+        <table>
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Course</th>
+                <th>Marks</th>
+            </tr>
+
+            <tr>
+                <td>1876</td>
+                <td>Rahul</td>
+                <td>web tech</td>
+                <td>85</td>
+            </tr>
+
+            <tr>
+                <td>2345</td>
+                <td>rohith</td>
+                <td>Daa</td>
+                <td>90</td>
+            </tr>
+
+            <tr>
+                <td>1969</td>
+                <td>Punith</td>
+                <td>data science</td>
+                <td>100</td>
+            </tr>
+        </table>
+
+    </div>
+
+</body>
+</html>
+```

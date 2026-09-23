@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Dropdown Menu</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        .navbar {
+            background: #333;
+            padding: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            display: inline-block;
+        }
+
+        .navbar a:hover {
+            background: #555;
+        }
+
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 180px;
+            box-shadow: 0 4px 8px gray;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            display: block;
+            padding: 12px 15px;
+        }
+
+        .dropdown-content a:hover {
+            background: lightgray;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <a href="#">Home</a>
+
+        <div class="dropdown">
+            <a href="#">Courses ▼</a>
+
+            <div class="dropdown-content">
+                <a href="#">HTML</a>
+                <a href="#">CSS</a>
+                <a href="#">JavaScript</a>
+                <a href="#">Python</a>
+            </div>
+        </div>
+
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+
+    </div>
+
+    <div class="content">
+        <h1>CSS Dropdown Menu</h1>
+        <p>Move the mouse over "Courses" to see the dropdown menu.</p>
+    </div>
+
+</body>
+</html>

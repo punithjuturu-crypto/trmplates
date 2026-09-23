@@ -1,0 +1,73 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Pseudo-Elements</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 40px;
+        }
+
+        .container {
+            width: 600px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border: 2px solid darkblue;
+        }
+
+        /* ::before */
+        h1::before {
+            content: "★ ";
+            color: orange;
+        }
+
+        /* ::after */
+        h1::after {
+            content: " ★";
+            color: orange;
+        }
+
+        /* ::first-letter */
+        .paragraph::first-letter {
+            color: red;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        /* ::first-line */
+        .paragraph::first-line {
+            color: darkblue;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>CSS Pseudo-Elements</h1>
+
+        <p class="paragraph">
+            CSS pseudo-elements allow us to style a specific
+            part of an HTML element. The first letter of this
+            paragraph is styled differently from the remaining
+            text. The first line also has a special style.
+        </p>
+
+        <p>
+            The heading uses both before and after pseudo-elements.
+        </p>
+
+    </div>
+
+</body>
+</html>
+```

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Filters</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f2f2f2;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            padding: 30px;
+        }
+
+        .filter-box {
+            width: 220px;
+        }
+
+        .filter-box img {
+            width: 220px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .blur img {
+            filter: blur(5px);
+        }
+
+        .grayscale img {
+            filter: grayscale(100%);
+        }
+
+        .brightness img {
+            filter: brightness(150%);
+        }
+
+        .contrast img {
+            filter: contrast(180%);
+        }
+
+        h2 {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Image Filters</h1>
+
+    <div class="gallery">
+
+        <div class="filter-box">
+            <h2>Normal</h2>
+            <img src="https://picsum.photos/id/1015/220/160">
+        </div>
+
+        <div class="filter-box blur">
+            <h2>Blur</h2>
+            <img src="https://picsum.photos/id/1015/220/160">
+        </div>
+
+        <div class="filter-box grayscale">
+            <h2>Grayscale</h2>
+            <img src="https://picsum.photos/id/1015/220/160">
+        </div>
+
+        <div class="filter-box brightness">
+            <h2>Brightness</h2>
+            <img src="https://picsum.photos/id/1015/220/160">
+        </div>
+
+        <div class="filter-box contrast">
+            <h2>Contrast</h2>
+            <img src="https://picsum.photos/id/1015/220/160">
+        </div>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Responsive Photo Gallery</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+            margin-bottom: 30px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        .photo {
+            height: 200px;
+            border: 3px solid white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s;
+        }
+
+        .photo img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Tablet */
+        @media screen and (max-width: 800px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile */
+        @media screen and (max-width: 500px) {
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .photo {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Responsive Photo Gallery</h1>
+
+    <div class="gallery">
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1015/600/400"
+                 alt="Mountain">
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1016/600/400"
+                 alt="Nature">
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1025/600/400"
+                 alt="Animal">
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1035/600/400"
+                 alt="Landscape">
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1043/600/400"
+                 alt="Forest">
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1050/600/400"
+                 alt="Nature">
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1069/600/400"
+                 alt="Beach">
+        </div>
+
+        <div class="photo">
+            <img src="https://picsum.photos/id/1074/600/400"
+                 alt="Mountain">
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

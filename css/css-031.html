@@ -1,0 +1,105 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Gradients</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .box {
+            height: 200px;
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+            border-radius: 10px;
+        }
+
+        /* Linear Gradient */
+        .linear {
+            background: linear-gradient(
+                to right,
+                blue,
+                purple
+            );
+        }
+
+        /* Linear Gradient with Multiple Colors */
+        .linear2 {
+            background: linear-gradient(
+                45deg,
+                red,
+                orange,
+                yellow
+            );
+        }
+
+        /* Radial Gradient */
+        .radial {
+            background: radial-gradient(
+                circle,
+                yellow,
+                orange,
+                red
+            );
+        }
+
+        /* Radial Gradient with Two Colors */
+        .radial2 {
+            background: radial-gradient(
+                circle,
+                lightblue,
+                darkblue
+            );
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Gradients</h1>
+
+    <div class="container">
+
+        <div class="box linear">
+            Linear Gradient
+        </div>
+
+        <div class="box linear2">
+            Linear Gradient - 45 Degree
+        </div>
+
+        <div class="box radial">
+            Radial Gradient
+        </div>
+
+        <div class="box radial2">
+            Radial Gradient - Circle
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

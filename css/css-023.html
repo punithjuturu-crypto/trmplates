@@ -1,0 +1,171 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Cards</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 40px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+            margin-bottom: 40px;
+        }
+
+        .products {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            width: 280px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px gray;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .product-image {
+            height: 180px;
+            background-color: lightblue;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h2 {
+            color: darkblue;
+        }
+
+        .price {
+            color: darkred;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .card p {
+            color: #555;
+        }
+
+        .buy-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: darkblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .buy-btn:hover {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Our Products</h1>
+
+    <div class="products">
+
+        <div class="card">
+
+            <div class="product-image">
+            laptop
+            </div>
+
+            <div class="card-content">
+                <h2>laptop</h2>
+
+                <p>
+                    High-quality laptop
+                </p>
+
+                <p class="price">₹75000</p>
+
+                <button class="buy-btn">
+                    Buy Now
+                </button>
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="product-image">
+                ⌚
+            </div>
+
+            <div class="card-content">
+                <h2>Smart Watch</h2>
+
+                <p>
+                    Smart watch with fitness tracking
+                    and notifications.
+                </p>
+
+                <p class="price">₹1,499</p>
+
+                <button class="buy-btn">
+                    Buy Now
+                </button>
+            </div>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="product-image">
+                🎒
+            </div>
+
+            <div class="card-content">
+                <h2>College Backpack</h2>
+
+                <p>
+                    Stylish and durable backpack
+                    for everyday college use.
+                </p>
+
+                <p class="price">₹799</p>
+
+                <button class="buy-btn">
+                    Buy Now
+                </button>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+```

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive CSS Grid</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8fafc;
+        }
+
+        header {
+            background: #7c3aed;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px #ccc;
+        }
+
+        .card h2 {
+            color: #7c3aed;
+            margin-bottom: 15px;
+        }
+
+        /* Tablet */
+        @media (max-width: 900px) {
+
+            .container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            .container {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 25px;
+            }
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Responsive Grid Website</h1>
+    <p>Resize the browser window to see the layout change.</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>HTML</h2>
+        <p>HTML creates the structure of a webpage.</p>
+    </div>
+
+    <div class="card">
+        <h2>CSS</h2>
+        <p>CSS styles and designs the webpage.</p>
+    </div>
+
+    <div class="card">
+        <h2>JavaScript</h2>
+        <p>JavaScript adds functionality.</p>
+    </div>
+
+    <div class="card">
+        <h2>Python</h2>
+        <p>Python is a popular programming language.</p>
+    </div>
+
+    <div class="card">
+        <h2>C Programming</h2>
+        <p>C is a powerful programming language.</p>
+    </div>
+
+    <div class="card">
+        <h2>Web Design</h2>
+        <p>Web design creates attractive websites.</p>
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Responsive Website</p>
+</footer>
+
+</body>
+</html>

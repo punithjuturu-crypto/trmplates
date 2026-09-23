@@ -1,0 +1,76 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Flexbox</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+
+            width: 90%;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: white;
+            border: 2px solid darkblue;
+        }
+
+        .box {
+            width: 200px;
+            height: 150px;
+            background-color: lightblue;
+            border: 2px solid blue;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .box:hover {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>CSS Flexbox Demonstration</h1>
+
+    <div class="flex-container">
+
+        <div class="box">HTML</div>
+
+        <div class="box">CSS</div>
+
+        <div class="box">JavaScript</div>
+
+        <div class="box">Python</div>
+
+    </div>
+
+</body>
+</html>
+```

@@ -1,0 +1,340 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Personal Portfolio</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #222;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        nav ul li a:hover {
+            color: #00bcd4;
+        }
+
+        /* Home */
+        .home {
+            min-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #dff6ff;
+            padding: 30px;
+        }
+
+        .home h1 {
+            font-size: 50px;
+            color: darkblue;
+            margin-bottom: 10px;
+        }
+
+        .home p {
+            font-size: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: darkblue;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .btn:hover {
+            background-color: black;
+        }
+
+        /* Sections */
+        section {
+            padding: 70px 10%;
+        }
+
+        section h2 {
+            text-align: center;
+            color: darkblue;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+
+        /* About */
+        .about {
+            background-color: white;
+            text-align: center;
+        }
+
+        /* Skills */
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            width: 200px;
+            padding: 25px;
+            background-color: white;
+            border: 2px solid darkblue;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .skill:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Projects */
+        .projects {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .project {
+            width: 280px;
+            background-color: white;
+            padding: 25px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .project h3 {
+            color: darkblue;
+        }
+
+        /* Contact */
+        .contact {
+            background-color: white;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+
+            nav {
+                flex-direction: column;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+            }
+
+            nav ul li {
+                padding: 8px;
+            }
+
+            .home h1 {
+                font-size: 35px;
+            }
+
+            section {
+                padding: 50px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+
+        <div class="logo">
+            My Portfolio
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Home -->
+    <section class="home" id="home">
+
+        <h1>Hello, I'm Punith</h1>
+
+        <p>
+            Student | Web Developer | Programmer
+        </p>
+
+        <a href="#about" class="btn">
+            Know More
+        </a>
+
+    </section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+
+        <h2>About Me</h2>
+
+        <p>
+            I am a college student interested in web development
+            and programming. and gaming
+        </p>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>Webpage Structure</p>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>Webpage Styling</p>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>Web Interactivity</p>
+            </div>
+
+            <div class="skill">
+                <h3>Python</h3>
+                <p>Programming</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="projects">
+
+            <div class="project">
+                <h3>College Website</h3>
+                <p>
+                    A simple college website created using HTML
+                    and CSS.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Student Registration</h3>
+                <p>
+                    A student registration form created using
+                    HTML and CSS.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>
+                    A personal portfolio website demonstrating
+                    web development skills.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+
+        <h2>Contact Me</h2>
+
+        <p>Email: punithjuturu@gmail.com</p>
+
+        <p>Phone: +91 98765 43210</p>
+
+        <a href="mailto:punith@example.com" class="btn">
+            Send Email
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy; 2026 Punith. All Rights Reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```

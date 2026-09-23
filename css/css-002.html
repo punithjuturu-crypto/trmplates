@@ -1,0 +1,143 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Selectors</title>
+
+    <style>
+
+        /* 1. Universal Selector */
+        * {
+            box-sizing: border-box;
+        }
+
+        /* 2. Element Selector */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        /* 3. ID Selector */
+        #main-heading {
+            color: darkblue;
+            text-align: center;
+        }
+
+        /* 4. Class Selector */
+        .description {
+            color: green;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        /* 5. Group Selector */
+        h2, h3 {
+            color: darkred;
+        }
+
+        /* 6. Descendant Selector */
+        .box p {
+            color: #444;
+            line-height: 1.6;
+        }
+
+        /* 7. Child Selector */
+        .menu > li {
+            color: purple;
+            margin: 8px;
+        }
+
+        /* 8. Attribute Selector */
+        input[type="text"] {
+            padding: 10px;
+            border: 2px solid blue;
+        }
+
+        /* 9. Pseudo-class Selector */
+        button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        /* 10. Pseudo-element Selector */
+        .special::first-letter {
+            color: red;
+            font-size: 30px;
+        }
+
+        .box {
+            width: 500px;
+            margin: 30px auto;
+            padding: 25px;
+            background-color: white;
+            border: 2px solid darkblue;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ID Selector -->
+    <h1 id="main-heading">Different CSS Selectors</h1>
+
+    <!-- Class Selector -->
+    <p class="description">
+        This webpage demonstrates different types of CSS selectors.
+    </p>
+
+    <div class="box">
+
+        <!-- Element and Group Selectors -->
+        <h2>CSS Selectors</h2>
+
+        <h3>Examples</h3>
+
+        <!-- Descendant Selector -->
+        <p>
+            CSS selectors are used to select HTML elements
+            and apply styles to them.
+        </p>
+
+        <!-- Pseudo-element Selector -->
+        <p class="special">
+            Selectors make it easy to style different elements.
+        </p>
+
+        <!-- Child Selector -->
+        <h3>Subjects</h3>
+
+        <ul class="menu">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <!-- Attribute Selector -->
+        <h3>Enter Your Name</h3>
+
+        <input type="text" placeholder="Enter your name">
+
+        <br>
+
+        <!-- Pseudo-class Selector -->
+        <button>Submit</button>
+
+    </div>
+
+</body>
+</html>
+```
